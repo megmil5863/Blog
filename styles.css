@@ -32,17 +32,19 @@ nav a:hover {
 }
 
 /* =========================
-   BLOG LAYOUT (FLEXBOX)
+   BLOG LAYOUT (IMPROVED FLEXBOX)
 ========================= */
 #blog {
   display: flex;
+  flex-wrap: wrap;              /* ✅ allows stacking instead of breaking */
   gap: 20px;
   padding: 20px;
   justify-content: center;
 }
 
 article {
-  flex: 1;
+  flex: 1 1 300px;              /* ✅ responsive sizing fix */
+  max-width: 500px;             /* ✅ prevents oversized stretching */
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
